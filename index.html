@@ -472,7 +472,19 @@
 
     // Mostrar a pontuação
     alert("Você acertou " + pontuacao + " de 10 perguntas.");
+  // Mostrar os erros
+if (erros.length > 0) {
+    var mensagem_erros = "Você errou as seguintes perguntas:\n\n";
+    for (var i = 0; i < erros.length; i++) {
+        mensagem_erros += erros[i].pergunta + "\n";
+        mensagem_erros += "Resposta correta: " + erros[i].resposta_correta + "\n";
+        mensagem_erros += "Sua resposta: " + erros[i].resposta_usuario + "\n\n";
+    }
+    alert(mensagem_erros);
+} else {
+    alert("Parabéns! Você acertou todas as perguntas.");
 }
+  }
   </script>
 </body>
 </html>

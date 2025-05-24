@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Estudos de Português</title>
+  <style>
+    body {
+      font-family: 'Didot', serif;
+      background-image: linear-gradient(to bottom, #964B00, #808080, #964B00);
+      background-size: 100% 100%;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      color: #F5F5DC;
+    }
+
+    button {
+      background-color: #964B00;
+      color: #F5F5DC;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-family: 'Didot', serif;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #F5F5DC;
+      color: #964B00;
+    }
+
+    mark {
+      background-color: #F5F5DC;
+      color: #964B00;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    #conteudo {
+      width: 90%;
+      margin: 20px auto;
+      background-color: rgba(245, 245, 220, 0.1);
+      padding: 20px;
+      border: 1px solid #F5F5DC;
+      border-radius: 10px;
+      max-height: 600px; /* Increased max-height for more content */
+      overflow-y: auto;
+    }
+
+    h2, h3 {
+      color: #F5F5DC;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    hr {
+      border: 1px solid #F5F5DC;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1> •{<mark>linguagens</mark>}•<br>•[<mark>códigos</mark>]•<br>•(<mark>e suas tecnologias</mark>)• </h1>
+    <button onclick="estudar()">estudar</button>
+    <button onclick="quiz()">jogar quiz</button>
+  </center>
+
+  <div id="conteudo"></div>
+
+  <script>
+    // Keep track of studied subjects
+    var studiedSubjects = {
+      portugues: false,
+      espanhol: false,
+      ingles: false,
+      artes: false,
+      educacaoFisica: false
+    };
+
+    function estudar() {
+      var materia = prompt("Selecione A Matéria Para Estudar:\n1. Português\n2. Espanhol\n3. Inglês\n4. Artes\n5. Educação física");
+      var conteudo = document.getElementById("conteudo");
+
+      if (materia === '1') {
+        studiedSubjects.portugues = true;
+        var tema = prompt("Português selecionado. Escolha o assunto:\n1. Pré-Modernismo\n2. Vanguardas Europeias");
+
+        if (tema === '1') {
+          conteudo.innerHTML = `
+            <h2>Pré-Modernismo (1902–1922)</h2>
+            <p>O Pré-Modernismo não foi uma escola literária com características estilísticas unificadas, mas sim um período de **transição** e **preparação** para o Modernismo. Ele abrangeu as primeiras duas décadas do século XX no Brasil e foi um reflexo das profundas transformações sociais, políticas e econômicas que o país vivenciava.</p>
+
+            <h3>Contexto Histórico e Social</h3>
+            <p>O Brasil, nesse período, passava do regime monárquico para a **República Velha** (República Oligárquica), marcada pela política do "café com leite" e o coronelismo. A abolição da escravatura (1888) não resolveu as desigualdades sociais; a população negra continuou marginalizada e a vinda de imigrantes para substituir a mão de obra nas lavouras gerou novas tensões. Revoltas sociais como a **Guerra de Canudos** (1896-1897), a **Revolta da Vacina** (1904) e a **Guerra do Contestado** (1912-1916) expunham a fragilidade do sistema e as graves condições de vida do povo. A literatura desse período, diferentemente das escolas anteriores que muitas vezes idealizavam o Brasil, começou a **denunciar** essas realidades e a mostrar um país problemático.</p>
+
+            <h3>Características Gerais</h3>
+            <ul>
+              <li>**Crítica Social e Denúncia:** Os autores não se preocupavam em criar uma estética nova, mas em abordar os problemas brasileiros: a miséria, o abandono rural, o preconceito, as desigualdades.</li>
+              <li>**Regionalismo:** Forte foco nas realidades das diversas regiões do Brasil, especialmente o Nordeste, o sertão e as áreas rurais.</li>
+              <li>**Nacionalismo Crítico:** Ao invés de um nacionalismo ufanista, havia uma visão mais realista e, por vezes, pessimista do Brasil.</li>
+              <li>**Linguagem Coloquial e Informal:** Aproximação da linguagem literária com a fala popular e regional, rompendo com a formalidade parnasiana e simbolista.</li>
+              <li>**Ecletismo Estilístico:** Coexistência de características de escolas anteriores (Realismo, Naturalismo, Parnasianismo, Simbolismo) sem a predominância de uma única estética. Muitos autores eram considerados "ponte" entre o passado e o futuro literário.</li>
+              <li>**Personagens Marginalizados:** Foco em figuras esquecidas ou mal compreendidas pela sociedade, como o sertanejo, o caipira e o mulato.</li>
+            </ul>
+
+            <h3>Principais Autores e Obras</h3>
+            <p><strong>Euclides da Cunha (1866-1909):</strong> Engenheiro e jornalista, testemunhou a Guerra de Canudos. Sua obra-prima, “<em>Os Sertões</em>” (1902), é um marco. É um livro híbrido, que mistura literatura, jornalismo, história, geografia e sociologia. Descreve a tragédia de Canudos, a luta dos sertanejos contra o Exército e a singularidade daquela região. A obra é dividida em três partes: “A Terra” (geografia), “O Homem” (o sertanejo, suas características e sua cultura) e “A Luta” (a guerra propriamente dita).</p>
+            <p><strong>Monteiro Lobato (1882-1948):</strong> Escritor multifacetado, conhecido por sua literatura infantil ("Sítio do Pica-Pau Amarelo"), mas também um importante autor pré-modernista. Em “<em>Urupês</em>” (1918), criou o personagem **Jeca Tatu**, que se tornou um símbolo do caipira brasileiro. Lobato criticava a imagem idealizada do homem do campo, mostrando o Jeca como um homem ignorante, preguiçoso e doente, reflexo do abandono do governo em relação à população rural. Apesar das críticas, Lobato era um nacionalista e defendia o desenvolvimento do Brasil.</p>
+            <p><strong>Lima Barreto (1881-1922):</strong> Escritor e jornalista, um dos maiores críticos da elite brasileira e do preconceito racial e social. Suas obras são marcadas pela ironia, pelo humor ácido e pela denúncia das hipocrisias sociais. “<em>Triste Fim de Policarpo Quaresma</em>” (1911) é sua obra mais famosa, na qual o protagonista, um nacionalista ufanista, tenta aplicar soluções "brasileiras" para os problemas do país e acaba frustrado e marginalizado. Outras obras importantes são “<em>O Cortiço</em>” e “<em>Recordações do Escrivão Isaías Caminha</em>”.</p>
+            <p><strong>Graça Aranha (1868-1931):</strong> Diplomata e escritor. Sua principal obra, “<em>Canaã</em>” (1902), aborda a imigração alemã no Espírito Santo e discute temas como o racismo, a xenofobia e o choque cultural. A obra apresenta uma visão mais filosófica e idealista em comparação com outros autores pré-modernistas, mas também aponta para problemas sociais. Graça Aranha teve um papel importante na **Semana de Arte Moderna de 1922**, sendo um de seus organizadores e proferindo o discurso de abertura.</p>
+            <p><strong>Augusto dos Anjos (1884-1914):</strong> Poeta paraibano, único autor pré-modernista com uma poesia tão singular que o fez ser chamado de "poeta da morte" e "poeta da ciência". Sua única obra publicada em vida, “<em>Eu</em>” (1912), chocou a crítica da época. Sua poesia é marcada pelo **pessimismo, morbidez, angústia existencial** e o uso de uma **linguagem científica** (termos como "carne", "verme", "átomo", "molécula", "decomposição"). Ele explorava o lado mais sombrio da existência humana e a efemeridade da vida. Sua linguagem era considerada "feia" e "antipoética" para os padrões da época, mas hoje é reconhecido como um precursor da liberdade formal modernista.</p>
+            <hr>
+          `;
+        } else if (tema === '2') {
+          conteudo.innerHTML = `
+            <h2>Vanguardas Europeias</h2>
+            <p>As Vanguardas Europeias foram **movimentos artísticos e culturais radicais** que surgiram na Europa no início do século XX (entre 1905 e 1945, aproximadamente). Elas representaram uma **ruptura total com os padrões estéticos e temáticos tradicionais** da arte que vinha desde o Renascimento, buscando novas formas de expressão e uma nova maneira de interpretar o mundo. Influenciaram profundamente as artes visuais, a literatura, a música, o teatro e o cinema, e foram cruciais para o desenvolvimento do Modernismo em diversas partes do mundo, incluindo o Brasil.</p>
+
+            <h3>Contexto Histórico</h3>
+            <p>O início do século XX foi um período de intensas transformações: a **Segunda Revolução Industrial** (com o avanço da tecnologia, a eletricidade, o automóvel, o cinema), o desenvolvimento da **psicanálise** (com Freud e a exploração do inconsciente), as **teorias da relatividade** (Einstein, que questionou a visão cartesiana do tempo e do espaço) e, sobretudo, as **guerras mundiais** (Primeira Guerra Mundial, 1914-1918, e Segunda Guerra Mundial, 1939-1945). O horror da guerra, a instabilidade política e social, e a desilusão com o progresso material levaram os artistas a questionar a lógica, a razão e os valores burgueses, buscando expressar a **angústia, a fragmentação e a irracionalidade** do mundo.</p>
+
+            <h3>Características Comuns das Vanguardas</h3>
+            <ul>
+              <li>**Ruptura e Inovação:** Rejeição explícita das tradições artísticas e acadêmicas (como a arte clássica, o Romantismo, o Realismo).</li>
+              <li>**Experimentação:** Busca por novas linguagens, técnicas e materiais.</li>
+              <li>**Antropocentrismo e Subjetividade:** Foco no ser humano e em sua percepção individual da realidade.</li>
+              <li>**Liberdade de Expressão:** Não havia regras ou normas fixas; a criatividade era o valor máximo.</li>
+              <li>**Crítica Social e Política:** Muitos movimentos eram engajados e criticavam a sociedade burguesa, a guerra, o capitalismo.</li>
+              <li>**Irracionalidade e Inconsciente:** Exploração dos sonhos, delírios, impulsos e o lado obscuro da mente humana.</li>
+              <li>**Fragmentação da Realidade:** A realidade não era mais vista de forma linear ou única, mas sim quebrada em múltiplos pontos de vista.</li>
+            </ul>
+
+            <h3>Principais Movimentos Vanguardistas</h3>
+
+            <h4>1. Expressionismo (Alemanha, a partir de 1905)</h4>
+            <p>Focou na **expressão dos sentimentos e emoções humanas** de forma intensa e muitas vezes angustiante, em vez de representar a realidade de forma objetiva. Os artistas distorciam as formas e usavam cores fortes e vibrantes para transmitir a dor, o medo, a solidão e a crítica social.</p>
+            <ul>
+              <li>**Características:** Cores chocantes, formas distorcidas, angústia, pessimismo, crítica social, tragédia.</li>
+              <li>**Artistas:** Edvard Munch (Noruega, "O Grito" é um precursor), Ernst Ludwig Kirchner, Franz Marc, Wassily Kandinsky (em sua fase inicial).</li>
+              <li>**Literatura:** Linguagem fragmentada, temas de desespero e loucura.</li>
+            </ul>
+
+            <h4>2. Fauvismo (França, 1905-1908)</h4>
+            <p>O nome "Fauves" (feras selvagens) foi dado aos artistas devido ao uso **agressivo e puro das cores**, sem preocupação com a representação fiel da realidade. A cor era usada como um elemento autônomo, expressivo e emocional, não apenas descritivo.</p>
+            <ul>
+              <li>**Características:** Cores intensas e arbitrárias (não realistas), pinceladas vigorosas, simplificação das formas.</li>
+              <li>**Artistas:** Henri Matisse (principal nome), André Derain, Maurice de Vlaminck.</li>
+            </ul>
+
+            <h4>3. Cubismo (França, a partir de 1907)</h4>
+            <p>Revolucionou a forma de representar objetos e pessoas, **fragmentando a realidade em formas geométricas** (cubos, cilindros, cones) e apresentando **múltiplos pontos de vista simultaneamente**. O objeto não era visto de um único ângulo, mas de todos os ângulos ao mesmo tempo, gerando uma visão não linear da realidade.</p>
+            <ul>
+              <li>**Características:** Geometrização das formas, múltiplas perspectivas, colagens (Cubismo Sintético), cores sóbrias (Cubismo Analítico).</li>
+              <li>**Artistas:** Pablo Picasso (principal criador com Braque), Georges Braque, Juan Gris.</li>
+              <li>**Obras:** "As Senhoritas de Avignon" (Picasso), "Guernica" (Picasso, embora posterior, tem forte influência cubista e surrealista).</li>
+            </ul>
+
+            <h4>4. Futurismo (Itália, a partir de 1909)</h4>
+            <p>Proposto por Filippo Tommaso Marinetti com seu "Manifesto Futurista", o Futurismo **exaltava a velocidade, a tecnologia, a máquina, o dinamismo e a violência**, glorificando o futuro e rejeitando o passado. Eram nacionalistas e, em alguns casos, pró-guerra.</p>
+            <ul>
+              <li>**Características:** Dinamismo, velocidade, máquinas, carros, aviões, glorificação da guerra, ruptura com o passado.</li>
+              <li>**Artistas:** Filippo Tommaso Marinetti (literatura), Umberto Boccioni (escultura), Giacomo Balla (pintura).</li>
+            </ul>
+
+            <h4>5. Dadaísmo (Suíça, a partir de 1916)</h4>
+            <p>Surgiu como uma **reação à loucura da Primeira Guerra Mundial**, pregando o **ilógico, o absurdo, a destruição da arte tradicional e a anarquia**. Questionava o próprio conceito de arte, usando objetos cotidianos e a provocação. O nome "Dada" (cavalo de pau em francês) foi escolhido aleatoriamente, refletindo a falta de sentido.</p>
+            <ul>
+              <li>**Características:** Anti-arte, ilogismo, nonsense, ironia, provocação, ready-mades (objetos comuns elevados ao status de arte).</li>
+              <li>**Artistas:** Marcel Duchamp ("A Fonte" - um urinol assinado, "Roda de Bicicleta"), Tristan Tzara, Hans Arp.</li>
+            </ul>
+
+            <h4>6. Surrealismo (França, a partir de 1924)</h4>
+            <p>Fundado por André Breton e fortemente influenciado pela psicanálise de Freud, o Surrealismo buscava **explorar o inconsciente, os sonhos, o subconsciente e o irracional**. Acreditavam que a verdadeira realidade estava além da percepção consciente.</p>
+            <ul>
+              <li>**Características:** Imagens oníricas (de sonho), justaposição de elementos incongruentes, automação psíquica (escrever ou pintar sem controle consciente).</li>
+              <li>**Artistas:** Salvador Dalí ("A Persistência da Memória" - relógios derretidos), René Magritte ("A Traição das Imagens" - "Isto não é um cachimbo"), Joan Miró, Max Ernst, Frida Kahlo (embora com características próprias, associada ao surrealismo).</li>
+            </ul>
+
+            <h4>7. Impressionismo (França, a partir de 1870s - embora anterior, sua influência é notável)</h4>
+            <p>Precursor das vanguardas, o Impressionismo focava na **captura da luz e das sensações momentâneas**, priorizando a impressão visual sobre a representação exata da realidade. As pinceladas eram rápidas e visíveis, as cores puras e misturadas diretamente na tela.</p>
+            <ul>
+              <li>**Características:** Luz, cor, atmosfera, pinceladas soltas, temas cotidianos, paisagens.</li>
+              <li>**Artistas:** Claude Monet ("Impressão, Nascer do Sol"), Pierre-Auguste Renoir, Edgar Degas.</li>
+            </ul>
+
+            <h4>8. Abstracionismo (Europa, a partir de 1910)</h4>
+            <p>O Abstracionismo representa a **ruptura completa com a representação figurativa**, ou seja, a arte não busca mais reproduzir a realidade visível. As formas, cores e linhas são usadas por si mesmas, para expressar ideias, emoções ou conceitos puramente visuais.</p>
+            <ul>
+              <li>**Características:** Ausência de representação figurativa, foco em linhas, formas, cores e texturas.</li>
+              <li>**Vertentes:** Abstracionismo Lírico (expressão de emoções, como Kandinsky) e Abstracionismo Geométrico (formas rigorosas, como Mondrian).</li>
+              <li>**Artistas:** Wassily Kandinsky (considerado o pai do Abstracionismo), Piet Mondrian.</li>
+            </ul>
+            <hr>
+          `;
+        } else {
+          conteudo.innerHTML = "<p>Assunto não reconhecido para Português.</p>";
+        }
+      } else if (materia === '2') {
+        studiedSubjects.espanhol = true;
+        conteudo.innerHTML = `
+          <h2>Espanhol: Condicional Simples e Artigos "el" e "lo"</h2>
+
+          <h3>1. Condicional Simples (Condicional Simple)</h3>
+          <p>O Condicional Simples é um tempo verbal em espanhol utilizado para expressar diversas ideias, principalmente **hipóteses, desejos, conselhos, ações futuras no passado** ou **pedidos de forma cortês**. Ele geralmente equivale ao futuro do pretérito em português (ex: "eu comeria", "ele falaria").</p>
+
+          <h4>Formação com Verbos Regulares:</h4>
+          <p>Para formar o condicional simples com verbos regulares, adiciona-se a mesma terminação ao **infinitivo completo** do verbo, independentemente de ele terminar em -ar, -er ou -ir.</p>
+          <ul>
+            <li>**Terminações:**
+              <ul>
+                <li>Yo -ía</li>
+                <li>Tú -ías</li>
+                <li>Él/Ella/Usted -ía</li>
+                <li>Nosotros/Nosotras -íamos</li>
+                <li>Vosotros/Vosotras -íais</li>
+                <li>Ellos/Ellas/Ustedes -ían</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>Exemplos:</strong></p>
+          <ul>
+            <li>Verbo **Comer** (terminado em -er):
+              <ul>
+                <li>Yo **comería** (Eu comeria)</li>
+                <li>Tú **comerías** (Tu comerias)</li>
+                <li>Él/Ella/Usted **comería** (Ele/Ela/Você comeria)</li>
+                <li>Nosotros **comeríamos** (Nós comeríamos)</li>
+                <li>Vosotros **comeríais** (Vós comeríeis)</li>
+                <li>Ellos/Ellas/Ustedes **comerían** (Eles/Elas/Vocês comeriam)</li>
+              </ul>
+            </li>
+            <li>Verbo **Vivir** (terminado em -ir):
+              <ul>
+                <li>Yo **viviría** (Eu viveria)</li>
+                <li>Ellos **vivirían** (Eles viveriam)</li>
+              </ul>
+            </li>
+            <li>Verbo **Hablar** (terminado em -ar):
+              <ul>
+                <li>Nosotros **hablaríamos** (Nós falaríamos)</li>
+                <li>Ella **hablaría** (Ela falaria)</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4>Verbos Irregulares no Condicional:</h4>
+          <p>Alguns verbos possuem um radical irregular no futuro e no condicional. Nesses casos, a terminação do condicional é adicionada a esse radical modificado. No entanto, as terminações (-ía, -ías, etc.) permanecem as mesmas.</p>
+
+          <p><strong>Principais Verbos Irregulares e seus Radicais:</strong></p>
+          <ul>
+            <li>**Caber** → cabr- → Yo **cabría** (Eu caberia)</li>
+            <li>**Decir** → dir- → Tú **dirías** (Tu dirias)</li>
+            <li>**Haber** → habr- → Habría (Haveria) - Impessoal</li>
+            <li>**Hacer** → har- → Nosotros **haríamos** (Nós faríamos)</li>
+            <li>**Poder** → podr- → Ellos **podrían** (Eles poderiam)</li>
+            <li>**Poner** → pondr- → Usted **pondría** (Você poria)</li>
+            <li>**Querer** → querr- → Él **querría** (Ele gostaria/quereria)</li>
+            <li>**Saber** → sabr- → Yo **sabría** (Eu saberia)</li>
+            <li>**Salir** → saldr- → Ella **saldría** (Ela sairia)</li>
+            <li>**Tener** → tendr- → Ustedes **tendrían** (Vocês teriam)</li>
+            <li>**Valer** → valdr- → Eso **valdría** la pena (Isso valeria a pena)</li>
+            <li>**Venir** → vendr- → Ellos **vendrían** (Eles viriam)</li>
+          </ul>
+
+          <hr>
+
+          <h3>2. Artigos Definidos "el" e Pronome Neutro "lo"</h3>
+
+          <h4>O Artigo Definido "El"</h4>
+          <p>O Condicional Simples é um tempo verbal em espanhol utilizado para expressar diversas ideias, principalmente **hipóteses, desejos, conselhos, ações futuras no passado** ou **pedidos de forma cortês**. Ele geralmente equivale ao futuro do pretérito em português (ex: "eu comeria", "ele falaria").</p>
+
+          <h4>Formação com Verbos Regulares:</h4>
+          <p>Para formar o condicional simples com verbos regulares, adiciona-se a mesma terminação ao **infinitivo completo** do verbo, independentemente de ele terminar em -ar, -er ou -ir.</p>
+          <ul>
+            <li>**Terminações:**
+              <ul>
+                <li>Yo -ía</li>
+                <li>Tú -ías</li>
+                <li>Él/Ella/Usted -ía</li>
+                <li>Nosotros/Nosotras -íamos</li>
+                <li>Vosotros/Vosotras -íais</li>
+                <li>Ellos/Ellas/Ustedes -ían</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>Exemplos:</strong></p>
+          <ul>
+            <li>Verbo **Comer** (terminado em -er):
+              <ul>
+                <li>Yo **comería** (Eu comeria)</li>
+                <li>Tú **comerías** (Tu comerias)</li>
+                <li>Él/Ella/Usted **comería** (Ele/Ela/Você comeria)</li>
+                <li>Nosotros **comeríamos** (Nós comeríamos)</li>
+                <li>Vosotros **comeríais** (Vós comeríeis)</li>
+                <li>Ellos/Ellas/Ustedes **comerían** (Eles/Elas/Vocês comeriam)</li>
+              </ul>
+            </li>
+            <li>Verbo **Vivir** (terminado em -ir):
+              <ul>
+                <li>Yo **viviría** (Eu viveria)</li>
+                <li>Ellos **vivirían** (Eles viveriam)</li>
+              </ul>
+            </li>
+            <li>Verbo **Hablar** (terminado em -ar):
+              <ul>
+                <li>Nosotros **hablaríamos** (Nós falaríamos)</li>
+                <li>Ella **hablaría** (Ela falaria)</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4>Verbos Irregulares no Condicional:</h4>
+          <p>Alguns verbos possuem um radical irregular no futuro e no condicional. Nesses casos, a terminação do condicional é adicionada a esse radical modificado. No entanto, as terminações (-ía, -ías, etc.) permanecem as mesmas.</p>
+
+          <p><strong>Principais Verbos Irregulares e seus Radicais:</strong></p>
+          <ul>
+            <li>**Caber** → cabr- → Yo **cabría** (Eu caberia)</li>
+            <li>**Decir** → dir- → Tú **dirías** (Tu dirias)</li>
+            <li>**Haber** → habr- → Habría (Haveria) - Impessoal</li>
+            <li>**Hacer** → har- → Nosotros **haríamos** (Nós faríamos)</li>
+            <li>**Poder** → podr- → Ellos **podrían** (Eles poderiam)</li>
+            <li>**Poner** → pondr- → Usted **pondría** (Você poria)</li>
+            <li>**Querer** → querr- → Él **querría** (Ele gostaria/quereria)</li>
+            <li>**Saber** → sabr- → Yo **sabría** (Eu saberia)</li>
+            <li>**Salir** → saldr- → Ella **saldría** (Ela sairia)</li>
+            <li>**Tener** → tendr- → Ustedes **tendrían** (Vocês teriam)</li>
+            <li>**Valer** → valdr- → Eso **valdría** la pena (Isso valeria a pena)</li>
+            <li>**Venir** → vendr- → Ellos **vendrían** (Eles viriam)</li>
+          </ul>
+
+          <hr>
+
+          <h3>2. Artigos Definidos "el" e Pronome Neutro "lo"</h3>
+
+          <h4>O Artigo Definido "El"</h4>
+          <p>**"El"** é o artigo definido masculino singular em espanhol, equivalente a "o" em português. É usado para se referir a **substantivos masculinos específicos, concretos e contáveis.**</p>
+          <ul>
+            <li>**Uso:** Antes de substantivos masculinos singulares.</li>
+            <li>**Exemplos:**
+              <ul>
+                <li>**el** libro (o livro)</li>
+                <li>**el** coche (o carro)</li>
+                <li>**el** sol (o sol)</li>
+                <li>**el** hombre (o homem)</li>
+                <li>**el** problema (o problema)</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h4>O Pronome/Artigo Neutro "Lo"</h4>
+          <p>**"Lo"** é um elemento gramatical único em espanhol que não possui um equivalente direto em português como "o". Ele serve como **pronome neutro** ou **artigo neutro**, e é usado para se referir a **ideias, conceitos, qualidades abstratas, partes de uma frase ou algo que não tem gênero definido.** "Lo" nunca acompanha um substantivo singular masculino ou feminino.</p>
+          <ul>
+            <li>**Uso 1: Artigo Neutro + Adjetivo/Advérbio/Particípio = Substantivação**
+              <p>Serve para transformar adjetivos, advérbios ou particípios em substantivos de sentido abstrato ou geral, referindo-se a "aquilo que é...".</p>
+              <ul>
+                <li>**lo** importante (o importante, aquilo que é importante)</li>
+                <li>**lo** bueno (o bom, aquilo que é bom)</li>
+                <li>**lo** mejor (o melhor)</li>
+                <li>**lo** difícil (o difícil)</li>
+                <li>**lo** hecho (o feito, aquilo que foi feito)</li>
+              </ul>
+              <p>Exemplo: **Lo importante** es aprender. (O importante é aprender.)</p>
+            </li>
+            <li>**Uso 2: Pronome Neutro (Substituindo Algo Indefinido)**
+              <p>Pode substituir uma ideia, uma frase inteira ou um conceito que já foi mencionado ou que é implícito, sem se referir a um objeto específico com gênero.</p>
+              <ul>
+                <li>No entiendo **lo que** dijiste. (Não entendo o que você disse.)</li>
+                <li>Haz **lo que** quieras. (Faça o que quiser.)</li>
+                <li>Ella sabe **lo mucho que** te quiero. (Ela sabe o quanto eu te amo.)</li>
+                <li>Él siempre hace **lo mismo**. (Ele sempre faz a mesma coisa.)</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>Diferença Essencial entre "El" e "Lo":</strong></p>
+          <ul>
+            <li>**El:** É um **artigo definido** e sempre precede um **substantivo masculino singular** (ex: *el coche*, *el árbol*).</li>
+            <li>**Lo:** É um **pronome/artigo neutro** e nunca precede um substantivo. Ele substantiva adjetivos ou se refere a **ideias e conceitos abstratos** (ex: *lo bello*, *lo increíble*, *lo que pasó*).</li>
+          </ul>
+          <hr>
+        `;
+      } else if (materia === '3') {
+        studiedSubjects.ingles = true;
+        conteudo.innerHTML = `
+          <h2>Inglês: Simple Past vs. Present Perfect</h2>
+
+          <p>Entender a diferença entre o **Simple Past** e o **Present Perfect** é fundamental para se comunicar de forma precisa em inglês. Embora ambos falem sobre o passado, eles o fazem de maneiras distintas, com focos diferentes em relação ao tempo e à conexão com o presente.</p>
+
+          <h3>1. Simple Past (Passado Simples)</h3>
+          <p>O **Simple Past** é usado para descrever **ações que começaram e terminaram em um ponto específico e definido no passado.** Não há conexão com o presente. Pense nele como uma fotografia de um evento que já acabou.</p>
+
+          <h4>Quando usar?</h4>
+          <ul>
+            <li>Para ações concluídas em um tempo específico no passado.</li>
+            <li>Para séries de ações concluídas no passado.</li>
+            <li>Para hábitos ou estados no passado que não são mais verdade.</li>
+            <li>Frequentemente usado com expressões de tempo definidas: **yesterday, last week/month/year, two days ago, in 1999, when I was young, at 8 PM.**</li>
+          </ul>
+
+          <h4>Estrutura:</h4>
+          <ul>
+            <li>**Verbos Regulares:** Adiciona-se "-ed" ao final do verbo na forma base (ou "-d" se já terminar em "e").
+              <ul>
+                <li>Play &rarr; Play**ed**</li>
+                <li>Work &rarr; Work**ed**</li>
+                <li>Live &rarr; Live**d**</li>
+              </ul>
+            </li>
+            <li>**Verbos Irregulares:** Possuem formas próprias que devem ser memorizadas (ex: go &rarr; went, eat &rarr; ate, see &rarr; saw).</li>
+          </ul>
+
+          <h4>Formas:</h4>
+          <ul>
+            <li>**Afirmativa:** Sujeito + Verbo no Passado (forma "-ed" para regulares ou a forma irregular).
+              <ul>
+                <li>I **visited** my grandma *yesterday*.</li>
+                <li>They **went** to Paris *last year*.</li>
+                <li>She **ate** pizza *for dinner*.</li>
+              </ul>
+            </li>
+            <li>**Negativa:** Sujeito + **did not (didn't)** + Verbo na Forma Base (infinitivo sem "to").
+              <ul>
+                <li>I **didn't visit** my grandma yesterday.</li>
+                <li>They **didn't go** to Paris last year.</li>
+                <li>She **didn't eat** pizza for dinner.</li>
+              </ul>
+            </li>
+            <li>**Interrogativa:** **Did** + Sujeito + Verbo na Forma Base?
+              <ul>
+                <li>**Did** you **visit** your grandma yesterday?</li>
+                <li>**Did** they **go** to Paris last year?</li>
+                <li>**Did** she **eat** pizza for dinner?</li>
+              </ul>
+            </li>
+          </ul>
+
+          <hr>
+
+          <h3>2. Present Perfect (Presente Perfeito)</h3>
+          <p>O **Present Perfect** é usado para descrever **ações que ocorreram no passado, mas que têm uma conexão ou relevância com o presente.** O tempo exato em que a ação aconteceu no passado geralmente não é importante ou é indefinido.</p>
+
+          <h4>Quando usar?</h4>
+          <ul>
+            <li>Para ações que começaram no passado e continuam até o presente. (Usa-se frequentemente com "since" e "for").
+              <ul>
+                <li>I **have lived** here **for** 10 years. (Comecei a morar há 10 anos e ainda moro).</li>
+                <li>She **has worked** at this company **since** 2015. (Começou em 2015 e ainda trabalha).</li>
+              </ul>
+            </li>
+            <li>Para experiências de vida que aconteceram em um tempo indefinido no passado. A ênfase está na experiência em si, não quando ela ocorreu.
+              <ul>
+                <li>I **have visited** many countries. (Em algum momento da minha vida, visitei, e essa experiência é relevante agora).</li>
+                <li>She **has never eaten** sushi. (Ela nunca teve essa experiência até agora).</li>
+              </ul>
+            </li>
+            <li>Para ações que foram concluídas recentemente e cujo resultado é visível ou relevante no presente.
+              <ul>
+                <li>I **have just finished** my homework. (Acabei de terminar, e o resultado é que está feito agora).</li>
+                <li>He **has lost** his keys. (Perdeu as chaves no passado, e o resultado é que ele não as tem agora).</li>
+              </ul>
+            </li>
+            <li>Com palavras como **ever, never, already, yet, just, recently, lately.**</li>
+          </ul>
+
+          <h4>Estrutura:</h4>
+          <ul>
+            <li>**Afirmativa:** Sujeito + **have/has** + Verbo no Particípio Passado.
+              <ul>
+                <li>I / You / We / They &rarr; **have** + Particípio Passado</li>
+                <li>He / She / It &rarr; **has** + Particípio Passado</li>
+              </ul>
+              <ul>
+                <li>She **has visited** many countries.</li>
+                <li>I **have studied** a lot this week.</li>
+                <li>We **have lived** here for five years.</li>
+              </ul>
+            </li>
+            <li>**Negativa:** Sujeito + **have not (haven't) / has not (hasn't)** + Verbo no Particípio Passado.
+              <ul>
+                <li>I **haven't seen** that movie yet.</li>
+                <li>He **hasn't finished** his report.</li>
+              </ul>
+            </li>
+            <li>**Interrogativa:** **Have/Has** + Sujeito + Verbo no Particípio Passado?
+              <ul>
+                <li>**Have** you **ever been** to London?</li>
+                <li>**Has** she **finished** her work?</li>
+              </ul>
+            </li>
+          </ul>
+
+          <hr>
+
+          <h3>Resumo e Comparação:</h3>
+          <ul>
+            <li>**Simple Past:**
+              <ul>
+                <li>**Quando?** Tempo **definido** no passado. A ação começou e terminou.</li>
+                <li>**Foco:** O momento da ação.</li>
+                <li>**Exemplo:** I **ate** pizza *yesterday*. (Comi pizza ontem, a ação acabou).</li>
+              </ul>
+            </li>
+            <li>**Present Perfect:**
+              <ul>
+                <li>**Quando?** Tempo **indefinido** no passado OU a ação continua até o presente/tem resultado no presente.</li>
+                <li>**Foco:** A ação em si ou seu resultado no presente.</li>
+                <li>**Exemplo:** I **have eaten** pizza many times. (Comi pizza várias vezes na vida, a experiência é relevante, mas o tempo exato não importa).</li>
+                <li>I **have eaten** too much pizza, and now I feel sick. (Comi demais, e o resultado é que me sinto mal agora).</li>
+              </ul>
+            </li>
+          </ul>
+          <hr>
+        `;
+      } else if (materia === '4') {
+        studiedSubjects.artes = true;
+        conteudo.innerHTML = `
+          <h2>Artes: Revisão Aprofundada sobre Música Brasileira</h2>
+
+          <p>A música brasileira é um dos maiores tesouros culturais do nosso país, refletindo uma complexa e rica tapeçaria de influências. Sua diversidade é resultado de um longo processo histórico de fusão cultural, com raízes profundas em diferentes continentes. Compreender essa formação é essencial para apreciar a vastidão e a originalidade da nossa produção musical.</p>
+
+          <h3>1. As Grandes Influências na Formação da Música Brasileira</h3>
+          <p>A música brasileira não nasceu de uma única fonte, mas sim de um encontro de universos sonoros que se chocaram e se misturaram ao longo de séculos. As três principais culturas que moldaram a nossa identidade musical são a **indígena**, a **africana** e a **portuguesa (europeia)**.</p>
+
+          <h4>Contexto Histórico-Cultural da Formação</h4>
+          <p>Entre os séculos XVI e XIX, durante o período colonial e, mais tarde, imperial, o Brasil foi palco de um intenso intercâmbio cultural forçado e espontâneo. A colonização portuguesa trouxe consigo a cultura europeia, enquanto a escravização de milhões de africanos de diversas etnias e a presença dos povos indígenas nativos criaram um caldeirão cultural único. Nesse contexto, a música não foi apenas uma forma de expressão, mas também de resistência, comunicação e manutenção de identidades.</p>
+
+          <h4>Contribuições de Cada Cultura:</h4>
+          <ul>
+            <li><strong>Cultura Africana:</strong> É a base da nossa rítmica e da expressividade corporal na música.
+              <ul>
+                <li>**Ritmo:** A maior e mais evidente contribuição. A presença de **percussão marcante** (atabaques, berimbaus, agogôs, pandeiros), a **polirritmia** (vários ritmos tocando simultaneamente) e a **síncope** (deslocamento da acentuação rítmica) são heranças diretas.</li>
+                <li>**Canto:** O **canto responsorial** (chamada e resposta entre um solista e um coro) é comum em diversas manifestações musicais brasileiras.</li>
+                <li>**Dança e Corporalidade:** A forte ligação entre música, dança e expressão corporal (presente no samba, capoeira, congada) é uma característica africana.</li>
+                <li>**Instrumentos:** O berimbau, o afoxé, o agogô e a cuíca são alguns dos instrumentos de origem africana que se tornaram símbolos da nossa música.</li>
+              </ul>
+            </li>
+            <li><strong>Cultura Portuguesa/Europeia:</strong> Trouxe a estrutura harmônica e melódica ocidental.
+              <ul>
+                <li>**Harmonia e Melodia:** A base da **harmonia tonal** (com acordes e progressões) e a estrutura melódica da música ocidental.</li>
+                <li>**Instrumentos:** A **viola caipira**, o **cavaquinho**, a **sanfona (acordeão)**, o violão e o piano são instrumentos de origem europeia que foram incorporados e adaptados à música brasileira.</li>
+                <li>**Formas Musicais:** O lundu, a modinha, a valsa e a polca, gêneros europeus, foram adaptados e deram origem a novos ritmos brasileiros.</li>
+                <li>**Escrita Musical:** A notação musical ocidental e a teoria musical.</li>
+              </ul>
+            </li>
+            <li><strong>Cultura Indígena:</strong> Contribuições mais sutis, mas presentes na sonoridade e na relação com a natureza.
+              <ul>
+                <li>**Canto Coletivo e Ritual:** A tradição do canto coletivo e a importância da música em rituais espirituais e festividades.</li>
+                <li>**Sons da Natureza:** A incorporação de sons da natureza e a criação de instrumentos a partir de elementos naturais (flautas de bambu, maracás, chocalhos).</li>
+                <li>**Escalas e Melodias:** Influências em certas escalas melódicas e formas de vocalização presentes em algumas manifestações regionais.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <hr>
+
+          <h3>2. Gênero Musical: Choro (ou Chorinho)</h3>
+          <p>O **Choro** é um dos primeiros e mais autênticos gêneros da música popular urbana brasileira. Nasceu no **Rio de Janeiro** no século XIX (por volta da década de 1870), fruto do encontro de ritmos europeus com a espontaneidade e a improvisação brasileira, influenciada pela síncope africana.</p>
+          <ul>
+            <li>**Origem e Evolução:** Começou como uma forma de "chorar" (lamentar ou ornamentar) as melodias europeias (polcas, valsas, maxixes), adicionando improvisações e ritmos sincopados. Era inicialmente tocado em reuniões informais e festas populares, os famosos "rodas de choro".</li>
+            <li>**Instrumentação Típica:** O choro é essencialmente **instrumental**, embora existam choros cantados. A formação clássica inclui:
+              <ul>
+                <li>**Flauta** (melodia principal)</li>
+                <li>**Cavaquinho** (harmonia e ritmo)</li>
+                <li>**Violão de 7 cordas** (linha de baixo e harmonia)</li>
+                <li>**Bandolim** (solo e improvisação)</li>
+                <li>**Pandeiro** (percussão e ritmo)</li>
+              </ul>
+            </li>
+            <li>**Características:**
+              <ul>
+                <li>**Virtuosismo e Improvisação:** Exige grande técnica dos músicos, com solos complexos e improvisações criativas.</li>
+                <li>**Ritmo Sincopado:** Uma das marcas registradas, que dá ao choro seu balanço característico.</li>
+                <li>**Melodias Vivas e Elaboradas:** Embora seja "choroso" no sentido de "enfeitado", muitas melodias são alegres e cheias de vida.</li>
+              </ul>
+            </li>
+            <li>**Grandes Nomes:** Pixinguinha, Chiquinha Gonzaga, Jacob do Bandolim, Waldir Azevedo.</li>
+          </ul>
+
+          <hr>
+
+          <h3>3. Gênero Musical: Samba</h3>
+          <p>O **Samba** é, sem dúvida, o gênero musical mais reconhecido do Brasil e um dos maiores símbolos da nossa identidade nacional. Sua origem está nas **rodas de samba de tradição africana** e nos terreiros de candomblé e umbanda, especialmente na Bahia e no Rio de Janeiro, no final do século XIX.</p>
+          <ul>
+            <li>**Consolidação:** O samba como o conhecemos hoje se consolidou no início do século XX no Rio de Janeiro, nas comunidades afro-brasileiras como a "Pequena África" (região da Praça Onze). A primeira gravação de um samba foi "Pelo Telefone" (1917), de Donga e Mauro de Almeida.</li>
+            <li>**Características:**
+              <ul>
+                <li>**Ritmo Sincopado e Contagiante:** Herança direta da percussão africana, é a alma do samba.</li>
+                <li>**Instrumentação:** Essencialmente percussiva, com destaque para: **pandeiro, surdo, tamborim, cuíca, caixa, chocalho**. Violão e cavaquinho também são fundamentais.</li>
+                <li>**Letras:** Variadas, podem tratar do cotidiano, amores, festas, problemas sociais, malandragem, orgulho de ser brasileiro. Muitas vezes com um tom de alegria e superação.</li>
+                <li>**Dança:** Intimamente ligada ao ritmo, com passos marcantes e a famosa "samba no pé".</li>
+              </ul>
+            </li>
+            <li>**Formas de Samba:** O samba evoluiu para diversas vertentes:
+              <ul>
+                <li>**Samba-enredo:** O samba que embala os desfiles das escolas de samba no Carnaval.</li>
+                <li>**Samba de Roda:** Forma mais antiga e tradicional, comum na Bahia.</li>
+                <li>**Samba-canção:** Mais lento, melódico e com letras românticas.</li>
+                <li>**Pagode:** Surgido na década de 1980, com uma instrumentação mais leve e letras mais descontraídas.</li>
+                <li>**Bossa Nova:** Samba sofisticado, com influências do jazz, surgido no final dos anos 1950.</li>
+              </ul>
+            </li>
+            <li>**Ícones do Samba:** Cartola, Nelson Cavaquinho, Ismael Silva, Clara Nunes, Beth Carvalho, Martinho da Vila.</li>
+          </ul>
+
+          <hr>
+
+          <h3>4. Heitor Villa-Lobos (1887-1959)</h3>
+          <p>Considerado o **maior expoente da música erudita brasileira** e um dos mais importantes compositores do século XX no mundo, Heitor Villa-Lobos foi um gênio musical que soube como poucos unir as complexas estruturas da música clássica europeia com a riqueza do folclore e dos ritmos populares brasileiros. Sua obra é um verdadeiro "retrato sonoro" do Brasil.</p>
+          <ul>
+            <li>**Formação e Influências:** Autodidata em grande parte, Villa-Lobos viajou extensivamente pelo Brasil, coletando melodias folclóricas e indígenas, e absorvendo a sonoridade das ruas e dos sertões. Estudou a música de Bach, a vanguarda francesa e as inovações musicais de sua época, mas sempre com um olhar voltado para a identidade brasileira.</li>
+            <li>**Nacionalismo Musical:** Sua grande missão foi criar uma música erudita que fosse autenticamente brasileira. Ele incorporou cantigas de roda, ritmos de maculelê, choros, sambas e sons da natureza (como o canto dos pássaros e o barulho da floresta) em suas composições sinfônicas e de câmara.</li>
+            <li>**Principais Obras:**
+              <ul>
+                <li>**Bachianas Brasileiras:** Uma série de nove suítes que combinam a contrapontística de Johann Sebastian Bach com elementos da música popular brasileira. São obras de grande beleza e complexidade.</li>
+                <li>**Choros:** Uma série de 14 peças que exploram a essência do choro brasileiro com forma livre e instrumentações variadas.</li>
+                <li>**Guia Prático:** Uma coleção de arranjos de canções folclóricas e infantis brasileiras, que ele usava para a educação musical.</li>
+                <li>**Concertos, Óperas, Sinfonias:** Uma vasta produção que abrangeu quase todos os gêneros musicais.</li>
+              </ul>
+            </li>
+            <li>**Legado:** Villa-Lobos não apenas elevou a música brasileira ao patamar internacional, mas também foi um grande educador musical, trabalhando para implementar o canto orfeônico nas escolas brasileiras. Sua obra é um pilar da identidade cultural do Brasil.</li>
+          </ul>
+
+          <hr>
+
+          <h3>5. A Diversidade Inigualável da Música Brasileira</h3>
+          <p>A música brasileira é celebrada mundialmente por sua **diversidade e originalidade**, resultado direto da sua formação multicultural. É um espelho da sociedade, refletindo as riquezas regionais, as lutas sociais, as alegrias e as dores do nosso povo.</p>
+          <ul>
+            <li>**Formação Multicultural:** A fusão das culturas indígena, africana e europeia não criou apenas alguns gêneros, mas um campo fértil para a contínua criação e transformação musical. Essa miscigenação sonora é o que torna a música brasileira tão única.</li>
+            <li>**Riqueza de Gêneros:** Além do Choro e do Samba, o Brasil é berço de uma infinidade de gêneros, cada um com suas particularidades regionais e históricas:
+              <ul>
+                <li>**Forró:** Originário do Nordeste, com sanfona, zabumba e triângulo (baião, xote, xaxado).</li>
+                <li>**Frevo:** Gênero vibrante e acelerado de Pernambuco, associado ao Carnaval.</li>
+                <li>**Maracatu:** Manifestação cultural e musical afro-brasileira de Pernambuco, com forte percussão e canto.</li>
+                <li>**Bossa Nova:** Nascida no Rio de Janeiro nos anos 50, uma fusão sofisticada do samba com o jazz, marcada pela suavidade e harmonia complexa.</li>
+                <li>**MPB (Música Popular Brasileira):** Gênero amplo que surgiu nos anos 60, absorvendo e misturando elementos de diversos estilos, com letras poéticas e engajadas.</li>
+                <li>**Sertanejo, Axé, Funk, Rock Brasileiro, Rap Brasileiro:** Gêneros mais recentes que continuam a expandir o panorama musical do país.</li>
+              </ul>
+            </li>
+            <li>**Expressão de Identidade:** A música brasileira serve como um poderoso veículo de expressão cultural, resistência política, celebração da vida e manutenção das tradições. Ela nos conta histórias, nos faz dançar e nos conecta com a nossa própria identidade.</li>
+          </ul>
+          <hr>
+        `;
+      } else if (materia === '5') {
+        studiedSubjects.educacaoFisica = true;
+        conteudo.innerHTML = `
+          <h2>Educação Física: Revisão Completa – 3º Ano</h2>
+
+          <p>A Educação Física no 3º ano do Ensino Médio aprofunda conceitos sobre o corpo, movimento e saúde, preparando o aluno para a vida adulta e para a compreensão de como o exercício físico impacta o bem-estar. Esta revisão aborda os princípios fundamentais do treinamento, as capacidades físicas e a importância de um estilo de vida ativo e saudável.</p>
+
+          <h3>1. Condições Físicas (Princípios do Treinamento Físico)</h3>
+          <p>Os princípios do treinamento físico são as diretrizes que devem ser seguidas para que um programa de exercícios seja eficaz, seguro e produza os resultados desejados. Eles garantem que o corpo se adapte e evolua de forma progressiva e saudável.</p>
+
+          <ul>
+            <li>**Princípio da Sobrecarga (Progressão):**
+              <p>É a necessidade de **aumentar gradualmente a carga ou o estresse** sobre o corpo para que ele continue a se adaptar e melhorar. Se o estímulo for sempre o mesmo, o corpo se acostuma e para de evoluir (platô). Exemplos incluem: aumentar o peso na musculação, aumentar a distância ou a velocidade na corrida, reduzir o tempo de descanso entre as séries.</p>
+              <ul>
+                <li>**Volume:** Refere-se à **quantidade total de exercício** realizado. Pode ser medido em tempo (minutos de corrida), número de repetições (na musculação), distância (na natação), etc.</li>
+                <li>**Intensidade:** Refere-se ao **grau de esforço** ou dificuldade do exercício. Pode ser medida pela carga (kg), velocidade (km/h), frequência cardíaca, etc. Um treino de alta intensidade por pouco tempo e um de baixa intensidade por muito tempo são formas de sobrecarga.</li>
+              </ul>
+            </li>
+            
+            <li>**Princípio da Continuidade:**
+              <p>O treinamento deve ser **regular e ininterrupto** para que os resultados sejam mantidos e a evolução continue. Paradas longas (período de destreinamento) podem levar à reversibilidade, ou seja, à perda das adaptações e da condição física adquirida.</p>
+            </li>
+            
+            <li>**Princípio da Especialidade (Especificidade):**
+              <p>O treinamento deve ser **específico para o objetivo desejado** e para as capacidades físicas que se quer desenvolver. Para ser bom em corrida, é preciso correr; para ser bom em musculação, é preciso levantar pesos. O corpo se adapta exatamente ao tipo de estímulo que recebe.</p>
+            </li>
+            
+            <li>**Princípio da Variedade:**
+              <p>É importante **alternar os tipos de exercícios, métodos e estímulos** dentro de um programa de treino. Isso evita a monotonia, previne o platô (quando o corpo para de responder), reduz o risco de lesões por sobrecarga repetitiva em uma mesma articulação/músculo e mantém o interesse do praticante.</p>
+            </li>
+            
+            <li>**Princípio da Individualidade Biológica:**
+              <p>Cada pessoa é única e **reage de forma diferente** ao mesmo estímulo de treinamento. Fatores como genética, idade, sexo, nível de condicionamento físico, histórico de lesões, alimentação, sono e estresse influenciam a capacidade de adaptação e os resultados. O que funciona para um pode não funcionar para outro.</p>
+            </li>
+
+            <li>**Princípio da Reversibilidade (Destreinamento):**
+              <p>A perda dos ganhos de condicionamento físico quando o treinamento é interrompido ou reduzido. "Use it or lose it." As adaptações fisiológicas conquistadas com o treino são reversíveis e diminuem na ausência de estímulos adequados.</p>
+            </li>
+          </ul>
+
+          <hr>
+
+          <h3>2. O que é Treinamento Físico?</h3>
+          <p>O **treinamento físico** é um processo **sistemático e planejado** de aplicação de exercícios físicos com o objetivo de **desenvolver e aprimorar as capacidades físicas, técnicas, táticas e psicológicas** de um indivíduo. Não é apenas "fazer exercício", mas sim seguir um plano com metas claras e métodos específicos.</p>
+          <ul>
+            <li>**Finalidades:**
+              <ul>
+                <li>**Saúde e Qualidade de Vida:** Melhorar o condicionamento cardiovascular, fortalecer músculos e ossos, controlar o peso, reduzir o estresse, prevenir doenças crônicas (diabetes, hipertensão).</li>
+                <li>**Estética:** Aprimorar a composição corporal (redução de gordura, aumento de massa muscular).</li>
+                <li>**Rendimento Esportivo:** Preparar atletas para competições, visando o máximo desempenho em uma modalidade específica.</li>
+                <li>**Reabilitação:** Recuperar funções motoras após lesões ou cirurgias.</li>
+                <li>**Recreação e Lazer:** Promover o bem-estar e a diversão através da atividade física.</li>
+              </ul>
+            </li>
+            <li>**Planejamento:** Um bom treinamento deve ser:
+              <ul>
+                <li>**Orientado:** Por um profissional qualificado (Educador Físico).</li>
+                <li>**Com Objetivos Claros:** Definir o que se quer alcançar (ex: correr 5km, ganhar massa muscular, melhorar a flexibilidade).</li>
+                <li>**Personalizado:** Respeitando os princípios do treinamento, especialmente a individualidade biológica.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <hr>
+
+          <h3>3. Capacidades Físicas</h3>
+          <p>As **capacidades físicas** são atributos treináveis do organismo humano que permitem a realização de movimentos. Elas são a base do desempenho físico e podem ser desenvolvidas por meio de treinamento específico. Existem capacidades físicas básicas (ou condicionantes) e capacidades motoras (ou coordenativas).</p>
+
+          <h4>Capacidades Físicas Básicas (Condicionantes):</h4>
+          <p>São aquelas que dependem diretamente dos sistemas energéticos do corpo e da capacidade muscular.</p>
+          <ul>
+            <li>**Força:**
+              <p>É a capacidade de um músculo ou grupo muscular de **exercer tensão contra uma resistência**. É fundamental para levantar, empurrar, puxar ou segurar objetos. Pode ser:</p>
+              <ul>
+                <li>**Força Máxima:** A maior força que um músculo pode gerar em um único esforço.</li>
+                <li>**Força Rápida (Potência):** Combinação de força e velocidade, capacidade de gerar força rapidamente (ex: saltar, arremessar).</li>
+                <li>**Resistência de Força:** Capacidade de manter a força por um tempo prolongado ou de realizar várias repetições de um movimento.</li>
+              </ul>
+              <p>Exemplo: Levantamento de peso, supino, agachamento.</p>
+            </li>
+            <li>**Resistência:**
+              <p>É a capacidade de **manter um esforço físico por um tempo prolongado** sem que haja perda significativa de rendimento ou fadiga excessiva. Pode ser:</p>
+              <ul>
+                <li>**Resistência Aeróbica (ou Cardiorrespiratória):** Capacidade de o corpo fornecer oxigênio aos músculos para sustentar atividades de média a longa duração. Desenvolve o sistema cardiovascular. Ex: corrida de longa distância, natação, ciclismo.</li>
+                <li>**Resistência Anaeróbica:** Capacidade de o corpo realizar esforços intensos e de curta duração sem depender diretamente do oxigênio. Produz lactato muscular. Ex: corrida de 100m, levantamento de peso máximo, piques em esportes coletivos.</li>
+              </ul>
+            </li>
+            <li>**Velocidade:**
+              <p>É a capacidade de **realizar movimentos no menor tempo possível**, seja um movimento isolado, uma sequência de movimentos ou o deslocamento do corpo no espaço. Pode ser:</p>
+              <ul>
+                <li>**Velocidade de Reação:** Rapidez para responder a um estímulo.</li>
+                <li>**Velocidade de Deslocamento:** Rapidez para mover-se de um ponto a outro.</li>
+                <li>**Velocidade de Membros:** Rapidez de movimentos de braços e pernas.</li>
+              </ul>
+              <p>Exemplo: Sprints no atletismo, arranques no futebol, movimentos rápidos em lutas.</p>
+            </li>
+            <li>**Flexibilidade:**
+              <p>É a **amplitude máxima de movimento das articulações**, permitindo que os músculos e tendões se estendam sem causar lesão. É fundamental para a prevenção de lesões e para a execução de movimentos mais amplos. É treinada através de alongamentos.</p>
+              <p>Exemplo: Alongamentos, yoga, ginástica rítmica.</p>
+            </li>
+            <li>**Equilíbrio:**
+              <p>É a capacidade de **manter o corpo em uma posição estável**, seja estática (parado) ou dinâmica (em movimento). É crucial para a coordenação e a prevenção de quedas.</p>
+              <p>Exemplo: Ginástica artística, ficar em um pé só, andar em uma linha reta.</p>
+            </li>
+          </ul>
+
+          <h4>Capacidades Motoras (Coordenativas):</h4>
+          <p>São aquelas que dependem da organização e controle do sistema nervoso central sobre o movimento.</p>
+          <ul>
+            <li>**Coordenação Motora:**
+              <p>É a capacidade de **realizar movimentos de forma harmoniosa, eficiente e precisa**, utilizando vários grupos musculares ao mesmo tempo. Envolve a sincronização entre o sistema nervoso e muscular.</p>
+              <p>Exemplo: Dançar, jogar vôlei, andar de bicicleta, tocar um instrumento.</p>
+            </li>
+            <li>**Agilidade:**
+              <p>É a capacidade de **mudar a direção do movimento do corpo no espaço com rapidez e eficiência**, mantendo o controle corporal. É uma combinação de velocidade e coordenação.</p>
+              <p>Exemplo: Mudanças de direção em esportes coletivos (futebol, basquete), circuitos de agilidade.</p>
+            </li>
+            <li>**Ritmo:**
+              <p>É a capacidade de **organizar os movimentos no tempo e no espaço**, seja acompanhando um ritmo externo (música) ou um ritmo interno (sequência de passos em uma dança). É essencial para a dança, mas também para o controle da cadência em corridas, por exemplo.</p>
+            </li>
+            <li>**Precisão:**
+              <p>É a capacidade de **controlar o movimento para atingir um alvo ou objetivo com exatidão**. Envolve a mira e o controle fino dos músculos.</p>
+              <p>Exemplo: Arremessar uma bola em um alvo, tiro ao arco, acertar um saque no tênis.</p>
+            </li>
+            <li>**Reação:**
+              <p>É a capacidade de **responder a um estímulo externo no menor tempo possível**. Pode ser simples (responder a um som) ou complexa (responder a uma situação de jogo).</p>
+              <p>Exemplo: A largada em uma corrida de 100 metros, um goleiro defender um pênalti.</p>
+            </li>
+          </ul>
+
+          <p><strong>Conclusão:</strong> O desenvolvimento equilibrado de todas essas capacidades físicas, aliado a um treinamento bem planejado e consistente, é fundamental para promover a saúde, melhorar o desempenho esportivo e garantir uma melhor qualidade de vida em todas as idades. A Educação Física nos proporciona as ferramentas para compreender e aplicar esses conceitos em nosso dia a dia.</p>
+          <hr>
+        `;
+      } else {
+        conteudo.innerHTML = "<p>Conteúdo ainda não disponível para essa matéria ou matéria não reconhecida. Por favor, escolha um número de 1 a 5.</p>";
+      }
+    }
+
+    function quiz() {
+      var materiaQuiz = prompt("Selecione A Matéria Para O Quiz:\n1. Português\n2. Espanhol\n3. Inglês\n4. Artes\n5. Educação física");
+      var perguntasDoQuiz = [];
+      var erros = []; // Para armazenar as perguntas erradas
+
+      if (materiaQuiz === '1') {
+        if (!studiedSubjects.portugues) {
+          alert("Você precisa estudar 'Português' antes de fazer o quiz sobre essa matéria!");
+          return;
+        }
+        perguntasDoQuiz = [
+          {
+              pergunta: "1. Qual autor do Pré-Modernismo é conhecido por sua obra 'Os Sertões', que retrata a Guerra de Canudos?",
+              respostas: ["A) Monteiro Lobato", "B) Euclides da Cunha", "C) Lima Barreto", "D) Augusto dos Anjos"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "2. Qual personagem criado por Monteiro Lobato em 'Urupês' se tornou um símbolo do caipira abandonado e doente?",
+              respostas: ["A) Emília", "B) Visconde de Sabugosa", "C) Jeca Tatu", "D) Pedrinho"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "3. O livro 'Triste Fim de Policarpo Quaresma', que critica o ufanismo brasileiro e as hipocrisias sociais, foi escrito por qual autor?",
+              respostas: ["A) Graça Aranha", "B) Euclides da Cunha", "C) Lima Barreto", "D) Augusto dos Anjos"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "4. Qual movimento de vanguarda europeia se caracterizou pela fragmentação das formas em figuras geométricas e pela apresentação de múltiplos pontos de vista simultaneamente?",
+              respostas: ["A) Expressionismo", "B) Surrealismo", "C) Cubismo", "D) Futurismo"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "5. O movimento artístico que glorificava a velocidade, a tecnologia, a máquina e a violência, rejeitando o passado, é o:",
+              respostas: ["A) Dadaísmo", "B) Impressionismo", "C) Fauvismo", "D) Futurismo"],
+              resposta_correta: "D"
+          },
+          {
+              pergunta: "6. A obra 'O Grito', de Edvard Munch, é um exemplo clássico de qual vanguarda europeia, marcada pela expressão intensa de emoções?",
+              respostas: ["A) Cubismo", "B) Expressionismo", "C) Surrealismo", "D) Fauvismo"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "7. Qual vanguarda buscava explorar o inconsciente, os sonhos e o subconsciente, influenciada pela psicanálise de Freud?",
+              respostas: ["A) Dadaísmo", "B) Futurismo", "C) Surrealismo", "D) Cubismo"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "8. Augusto dos Anjos, autor de 'Eu', é conhecido por sua poesia com forte influência de qual área do conhecimento, usando termos como 'átomo' e 'decomposição'?",
+              respostas: ["A) Filosofia", "B) Sociologia", "C) História", "D) Ciência"],
+              resposta_correta: "D"
+          },
+          {
+              pergunta: "9. O Pré-Modernismo é considerado uma escola literária ou uma fase de transição?",
+              respostas: ["A) Uma escola literária definida", "B) Uma fase de transição", "C) Um movimento poético isolado", "D) Uma corrente estética puramente regionalista"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "10. Qual artista dadaísta é famoso por suas obras 'ready-mades', como 'A Fonte' (um urinol assinado)?",
+              respostas: ["A) Salvador Dalí", "B) Pablo Picasso", "C) Marcel Duchamp", "D) Henri Matisse"],
+              resposta_correta: "C"
+          }
+        ];
+      } else if (materiaQuiz === '2') {
+        if (!studiedSubjects.espanhol) {
+          alert("Você precisa estudar 'Espanhol' antes de fazer o quiz sobre essa matéria!");
+          return;
+        }
+        perguntasDoQuiz = [
+          {
+              pergunta: "1. Qual é a terminação do condicional simples para 'yo' em verbos regulares?",
+              respostas: ["A) -aba", "B) -ía", "C) -ero", "D) -í"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "2. Como se forma o condicional simples do verbo 'hacer' (fazer)?",
+              respostas: ["A) hacero", "B) hacía", "C) haría", "D) haceía"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "3. Complete a frase com o condicional simples: 'Si tuviera dinero, yo ___ un coche nuevo.' (comprar)",
+              respostas: ["A) compraría", "B) compré", "C) compraré", "D) compraba"],
+              resposta_correta: "A"
+          },
+          {
+              pergunta: "4. Qual é o uso principal do artigo definido 'el'?",
+              respostas: ["A) Antes de substantivos femininos plurais", "B) Antes de substantivos masculinos singulares", "C) Como pronome neutro", "D) Para expressar ideias abstratas"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "5. Em qual situação usamos o pronome/artigo neutro 'lo'?",
+              respostas: ["A) Para indicar objetos masculinos específicos", "B) Para se referir a ideias abstratas ou conceitos", "C) Antes de substantivos femininos", "D) Apenas com verbos no passado"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "6. Qual a frase correta usando 'lo':",
+              respostas: ["A) El importante es estudiar.", "B) La importante es estudiar.", "C) Lo importante es estudiar.", "D) Los importante es estudiar."],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "7. Qual a forma correta do condicional simples do verbo 'tener' para 'ellos'?",
+              respostas: ["A) tenían", "B) tuvieran", "C) tendrían", "D) tienen"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "8. 'No entiendo ___ que dijiste.' Qual palavra completa corretamente a frase?",
+              respostas: ["A) el", "B) la", "C) lo", "D) los"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "9. O condicional simples em espanhol é equivalente a qual tempo verbal em português?",
+              respostas: ["A) Futuro do presente", "B) Pretérito imperfeito", "C) Futuro do pretérito", "D) Presente do indicativo"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "10. Qual a forma correta do condicional simples do verbo 'salir' para 'tú'?",
+              respostas: ["A) salías", "B) saldrías", "C) sales", "D) salieras"],
+              resposta_correta: "B"
+          }
+        ];
+      } else if (materiaQuiz === '3') {
+        if (!studiedSubjects.ingles) {
+          alert("Você precisa estudar 'Inglês' antes de fazer o quiz sobre essa matéria!");
+          return;
+        }
+        perguntasDoQuiz = [
+          {
+              pergunta: "1. Qual tempo verbal é usado para ações que começaram e terminaram em um ponto específico no passado?",
+              respostas: ["A) Present Perfect", "B) Simple Future", "C) Simple Past", "D) Present Continuous"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "2. Complete a frase: 'I ___ my homework *yesterday*.' (do)",
+              respostas: ["A) have done", "B) did", "C) do", "D) am doing"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "3. Qual das seguintes frases usa corretamente o Present Perfect?",
+              respostas: ["A) I went to the cinema last night.", "B) She has visited many countries.", "C) They played soccer yesterday.", "D) He ate pizza an hour ago."],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "4. Qual palavra é frequentemente usada com o Present Perfect para indicar que algo nunca aconteceu até o momento presente?",
+              respostas: ["A) yesterday", "B) last week", "C) never", "D) in 2005"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "5. 'She ___ at this company *since 2010*.' (work)",
+              respostas: ["A) worked", "B) works", "C) has worked", "D) is working"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "6. A pergunta 'Have you ever been to London?' foca em:",
+              respostas: ["A) Um evento específico no passado", "B) Uma experiência de vida em tempo indefinido", "C) Uma ação futura", "D) Um hábito no presente"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "7. Qual a forma negativa correta do Simple Past para 'They went to the park.'?",
+              respostas: ["A) They didn't went to the park.", "B) They haven't gone to the park.", "C) They didn't go to the park.", "D) They aren't going to the park."],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "8. Qual das seguintes frases indica uma ação concluída recentemente com resultado no presente?",
+              respostas: ["A) I bought a new car last month.", "B) I have just finished my project.", "C) I was sleeping when she called.", "D) I will visit them tomorrow."],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "9. O Present Perfect é formado por qual estrutura?",
+              respostas: ["A) Sujeito + verbo no passado", "B) Sujeito + will + verbo base", "C) Sujeito + have/has + particípio passado", "D) Sujeito + to be + verbo + ing"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "10. Se uma frase contém a expressão 'two hours ago', qual tempo verbal é mais apropriado?",
+              respostas: ["A) Present Perfect", "B) Simple Past", "C) Future Simple", "D) Present Continuous"],
+              resposta_correta: "B"
+          }
+        ];
+      } else if (materiaQuiz === '4') {
+        if (!studiedSubjects.artes) {
+          alert("Você precisa estudar 'Artes' antes de fazer o quiz sobre essa matéria!");
+          return;
+        }
+        perguntasDoQuiz = [
+          {
+              pergunta: "1. Quais são as três principais culturas que contribuíram para a formação da música brasileira?",
+              respostas: ["A) Japonesa, Alemã e Italiana", "B) Indígena, Africana e Portuguesa", "C) Espanhola, Francesa e Indígena", "D) Africana, Chinesa e Árabe"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "2. Qual gênero musical instrumental, nascido no Rio de Janeiro no século XIX, é marcado pela improvisação e virtuosismo, com instrumentos como flauta, cavaquinho e violão de 7 cordas?",
+              respostas: ["A) Samba", "B) Frevo", "C) Choro", "D) Forró"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "3. O samba, símbolo da identidade nacional, consolidou-se em qual cidade brasileira no início do século XX?",
+              respostas: ["A) Salvador", "B) São Paulo", "C) Rio de Janeiro", "D) Recife"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "4. Qual compositor é considerado o maior nome da música erudita brasileira, famoso por unir a música clássica europeia com elementos folclóricos brasileiros em obras como as 'Bachianas Brasileiras'?",
+              respostas: ["A) Tom Jobim", "B) Chico Buarque", "C) Heitor Villa-Lobos", "D) Pixinguinha"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "5. A contribuição africana para a música brasileira é mais evidente em qual aspecto?",
+              respostas: ["A) Harmonia tonal e escrita musical", "B) Instrumentos de corda como o violão", "C) Percussão, ritmo sincopado e canto responsorial", "D) Flautas e cantos cerimoniais"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "6. Qual a primeira gravação de um samba no Brasil, considerada um marco?",
+              respostas: ["A) Aquarela do Brasil", "B) Chega de Saudade", "C) Pelo Telefone", "D) Carinhoso"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "7. O gênero musical que surgiu no Nordeste, com sanfona, zabumba e triângulo, é o:",
+              respostas: ["A) Choro", "B) Samba", "C) Forró", "D) Frevo"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "8. A Bossa Nova é uma fusão de qual gênero musical brasileiro com o jazz?",
+              respostas: ["A) Frevo", "B) Maracatu", "C) Samba", "D) Choro"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "9. Qual instrumento é fundamental na formação clássica de um grupo de Choro?",
+              respostas: ["A) Trompete", "B) Bateria", "C) Cavaquinho", "D) Piano"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "10. Heitor Villa-Lobos é conhecido por incorporar sons de qual elemento em suas composições, demonstrando seu nacionalismo musical?",
+              respostas: ["A) Sons da cidade grande", "B) Sons de máquinas industriais", "C) Sons da natureza e elementos folclóricos", "D) Sons de orquestras europeias apenas"],
+              resposta_correta: "C"
+          }
+        ];
+      } else if (materiaQuiz === '5') {
+        if (!studiedSubjects.educacaoFisica) {
+          alert("Você precisa estudar 'Educação Física' antes de fazer o quiz sobre essa matéria!");
+          return;
+        }
+        perguntasDoQuiz = [
+          {
+              pergunta: "1. Qual princípio do treinamento físico se refere à necessidade de aumentar gradualmente o esforço sobre o corpo para que ele continue a evoluir?",
+              respostas: ["A) Continuidade", "B) Variedade", "C) Individualidade Biológica", "D) Sobrecarga"],
+              resposta_correta: "D"
+          },
+          {
+              pergunta: "2. A capacidade de um músculo exercer tensão contra uma resistência, como levantar pesos, é conhecida como:",
+              respostas: ["A) Resistência", "B) Velocidade", "C) Força", "D) Flexibilidade"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "3. Qual capacidade física permite realizar movimentos no menor tempo possível, como em um sprint de 100 metros?",
+              respostas: ["A) Força", "B) Velocidade", "C) Equilíbrio", "D) Agilidade"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "4. A capacidade de manter um esforço físico por um tempo prolongado sem perda significativa de rendimento é chamada de:",
+              respostas: ["A) Flexibilidade", "B) Coordenação", "C) Resistência", "D) Agilidade"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "5. Qual princípio do treinamento afirma que cada pessoa reage de forma diferente ao mesmo estímulo de exercício devido a fatores como genética e idade?",
+              respostas: ["A) Sobrecarga", "B) Continuidade", "C) Individualidade Biológica", "D) Especialidade"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "6. O que se refere à quantidade total de exercício realizado (ex: duração, repetições, distância)?",
+              respostas: ["A) Intensidade", "B) Volume", "C) Frequência", "D) Ritmo"],
+              resposta_correta: "B"
+          },
+          {
+              pergunta: "7. A capacidade de mudar a direção do movimento do corpo no espaço com rapidez e eficiência é a:",
+              respostas: ["A) Velocidade de reação", "B) Força rápida", "C) Agilidade", "D) Flexibilidade"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "8. Qual tipo de resistência é predominante em atividades de longa duração que utilizam oxigênio, como uma maratona?",
+              respostas: ["A) Resistência de força", "B) Resistência anaeróbica", "C) Resistência aeróbica", "D) Velocidade de resistência"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "9. O princípio que defende a importância de alternar exercícios e métodos para evitar monotonia e prevenir lesões é o da:",
+              respostas: ["A) Especificidade", "B) Reversibilidade", "C) Variedade", "D) Continuidade"],
+              resposta_correta: "C"
+          },
+          {
+              pergunta: "10. Qual é a capacidade de um movimento ser executado de forma precisa e controlada, como arremessar uma bola em um alvo?",
+              respostas: ["A) Coordenação", "B) Equilíbrio", "C) Ritmo", "D) Precisão"],
+              resposta_correta: "D"
+          }
+        ];
+      } else {
+        alert("Matéria não reconhecida ou quiz não disponível para essa matéria. Por favor, escolha um número de 1 a 5.");
+        return;
+      }
+
+      // Embaralhar as perguntas
+      perguntasDoQuiz = perguntasDoQuiz.sort(() => Math.random() - 0.5);
+      var pontuacao = 0;
+
+      // Fazer as perguntas
+      for (var i = 0; i < perguntasDoQuiz.length; i++) {
+          var perguntaAtual = perguntasDoQuiz[i];
+          var resposta_usuario = prompt(perguntaAtual.pergunta + "\n" + perguntaAtual.respostas.join("\n") + "\n\nEscolha uma opção (A, B, C, D):");
+          
+          if (resposta_usuario === null) { // Usuário cancelou
+              alert("Quiz cancelado.");
+              return;
+          }
+
+          resposta_usuario = resposta_usuario.toUpperCase();
+
+          if (resposta_usuario === perguntaAtual.resposta_correta) {
+              pontuacao++;
+          } else {
+              erros.push({
+                  pergunta: perguntaAtual.pergunta,
+                  resposta_correta: perguntaAtual.respostas.find(r => r.startsWith(perguntaAtual.resposta_correta)),
+                  resposta_usuario: resposta_usuario
+              });
+          }
+      }
+
+      // Mostrar a pontuação e os erros
+      alert("Você acertou " + pontuacao + " de " + perguntasDoQuiz.length + " perguntas.");
+
+      if (erros.length > 0) {
+          var mensagem_erros = "Você errou as seguintes perguntas:\n\n";
+          for (var j = 0; j < erros.length; j++) {
+              mensagem_erros += (j + 1) + ". " + erros[j].pergunta + "\n";
+              mensagem_erros += "  Sua resposta: " + erros[j].resposta_usuario + "\n";
+              mensagem_erros += "  Resposta correta: " + erros[j].resposta_correta + "\n\n";
+          }
+          alert(mensagem_erros);
+      } else {
+          alert("Parabéns! Você acertou todas as perguntas!");
+      }
+    }
+  </script>
+</body>
+</html>
